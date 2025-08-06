@@ -227,10 +227,17 @@
             height: 4.5rem; /* 72px - увеличено в 1.5 раза от 48px */
         }
         
-        /* Mobile Header Logo - 2x larger */
+        /* Mobile Header Logo - smaller overall header */
         @media (max-width: 767px) {
             .logo-header {
-                height: 9rem; /* 144px - в 2 раза больше */
+                height: 6rem; /* 96px - уменьшено в 1.5 раза от 9rem */
+            }
+            
+            /* Force smaller header height */
+            header {
+                height: 6.5rem !important; /* Принудительная высота хедера */
+                max-height: 6.5rem !important;
+                overflow: hidden !important;
             }
         }
         
