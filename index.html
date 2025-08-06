@@ -153,20 +153,22 @@
             position: absolute;
             inset: 0;
             background-size: cover;
-            background-position: center;
+            background-position: 40% center;
             background-attachment: fixed;
             transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .hero-bg-1 {
+                .hero-bg-1 {
             background-image: url('images/wp/wp1.jpeg');
+            background-position: 35% center; /* Сдвигаем левее для лучшего кадрирования байка */
             opacity: 1;
             animation: heroParallax1 20s ease-in-out infinite;
             will-change: opacity, transform;
         }
-        
+
         .hero-bg-2 {
             background-image: url('images/wp/wp2.jpeg');
+            background-position: 30% center; /* Показываем больше кота */
             opacity: 0;
             animation: heroParallax2 20s ease-in-out infinite;
             will-change: opacity, transform;
@@ -503,6 +505,14 @@
                 padding: 1.25rem 2.5rem;
                 font-size: 1.1rem;
             }
+            
+            .hero-bg-1 {
+                background-position: 30% center; /* Планшет портрет - компромисс */
+            }
+            
+            .hero-bg-2 {
+                background-position: 25% center; /* Планшет портрет - кот видим */
+            }
         }
         
         /* iPad Landscape */
@@ -526,6 +536,14 @@
             .hero-stat-number {
                 font-size: 2.5rem;
             }
+            
+            .hero-bg-1 {
+                background-position: 35% center; /* Планшет ландшафт - байк хорошо виден */
+            }
+            
+            .hero-bg-2 {
+                background-position: 30% center; /* Планшет ландшафт - кот полностью */
+            }
         }
         
         /* Mobile Specific - 2025 Best Practices */
@@ -534,6 +552,14 @@
                 min-height: 100vh;
                 min-height: 100dvh; /* Dynamic viewport height for mobile */
                 position: relative;
+            }
+            
+            .hero-bg-1 {
+                background-position: 25% center; /* На мобиле больше байка */
+            }
+            
+            .hero-bg-2 {
+                background-position: 20% center; /* На мобиле кот полностью видим */
             }
             
             .hero-content {
@@ -623,6 +649,14 @@
             
             .hero-subtitle {
                 font-size: 2.2rem;
+            }
+            
+            .hero-bg-1 {
+                background-position: 40% center; /* Десктоп - оптимальное позиционирование */
+            }
+            
+            .hero-bg-2 {
+                background-position: 35% center; /* Десктоп - кот хорошо виден */
             }
         }
         
