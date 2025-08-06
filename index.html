@@ -227,41 +227,41 @@
                 <h2 class="text-4xl md:text-5xl font-bold text-center mb-20">Find Your Perfect Match</h2>
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="bg-white rounded-3xl overflow-hidden shadow-xl ">
-                        <div class="h-52 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
-                            <i class="fas fa-feather text-white text-6xl"></i>
+                        <div class="h-52 bg-gray-200 relative">
+                            <img src="images/category1.jpg" alt="Light Scooters" class="w-full h-full object-cover">
                         </div>
                         <div class="p-8">
-                            <h3 class="text-2xl font-bold mb-3">Honda Click</h3>
-                            <p class="text-gray-600 mb-4">Perfect for beginners. Light, easy to handle, great for short trips around the island.</p>
+                            <h3 class="text-2xl font-bold mb-3">Light Scooters</h3>
+                            <p class="text-gray-600 mb-4">Perfect for beginners. Honda Click, Scoopy, Yamaha Fino. Light, easy to handle, great for short trips.</p>
                             <div class="flex items-center text-sm text-gray-500">
                                 <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                                <span>Automatic • 125cc • Fuel efficient</span>
+                                <span>Automatic • 125-160cc • Fuel efficient</span>
                             </div>
                         </div>
                     </div>
                     <div class="bg-white rounded-3xl overflow-hidden shadow-xl ">
-                        <div class="h-52 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
-                            <i class="fas fa-road text-white text-6xl"></i>
+                        <div class="h-52 bg-gray-200 relative">
+                            <img src="images/category2.jpg" alt="Sport Scooters" class="w-full h-full object-cover">
                         </div>
                         <div class="p-8">
-                            <h3 class="text-2xl font-bold mb-3">Yamaha NMAX</h3>
-                            <p class="text-gray-600 mb-4">Comfort cruiser for daily adventures. Perfect balance of power and efficiency.</p>
+                            <h3 class="text-2xl font-bold mb-3">Sport Scooters</h3>
+                            <p class="text-gray-600 mb-4">Comfort cruisers for daily adventures. Yamaha NMAX, Aerox, GPX Drone. Perfect balance of power and efficiency.</p>
                             <div class="flex items-center text-sm text-gray-500">
                                 <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                                <span>Automatic • 155cc • ABS brakes</span>
+                                <span>Automatic • 155cc • Sport performance</span>
                             </div>
                         </div>
                     </div>
                     <div class="bg-white rounded-3xl overflow-hidden shadow-xl ">
-                        <div class="h-52 bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center">
-                            <i class="fas fa-crown text-white text-6xl"></i>
+                        <div class="h-52 bg-gray-200 relative">
+                            <img src="images/category3.jpg" alt="Big Bikes" class="w-full h-full object-cover">
                         </div>
                         <div class="p-8">
-                            <h3 class="text-2xl font-bold mb-3">Yamaha XMAX</h3>
-                            <p class="text-gray-600 mb-4">Premium maxi-scooter. Ultimate comfort for long rides and island exploration.</p>
+                            <h3 class="text-2xl font-bold mb-3">Big Bikes</h3>
+                            <p class="text-gray-600 mb-4">Premium motorcycles and maxi-scooters. Yamaha XSR, Honda CB300R. Ultimate power for long rides and island exploration.</p>
                             <div class="flex items-center text-sm text-gray-500">
                                 <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                                <span>Automatic • 300cc • Luxury touring</span>
+                                <span>Manual & Auto • 155-300cc • Sport touring</span>
                             </div>
                         </div>
                     </div>
@@ -590,40 +590,7 @@
             }, 3000);
         }
 
-        // Check if config exists, otherwise use default
-        if (typeof bikesConfig === 'undefined') {
-            var bikesConfig = {
-                click: [
-                    {id: 1, number: "1", price_day: 250, price_month: 5000, sale_price: 45000, year: 2023, mileage: 5000, for_rent: true, for_sale: false, active: true},
-                    {id: 2, number: "2", price_day: 250, price_month: 5000, sale_price: 42000, year: 2023, mileage: 3000, for_rent: true, for_sale: false, active: true},
-                    {id: 3, number: "3", price_day: 200, price_month: 4500, sale_price: 38000, year: 2022, mileage: 8000, for_rent: true, for_sale: false, active: true},
-                    {id: 4, number: "4", price_day: 280, price_month: 5500, sale_price: 48000, year: 2024, mileage: 1000, for_rent: true, for_sale: true, active: true},
-                    {id: 5, number: "5", price_day: 200, price_month: 4500, sale_price: 35000, year: 2022, mileage: 12000, for_rent: true, for_sale: false, active: true},
-                    {id: 6, number: "6", price_day: 250, price_month: 5000, sale_price: 43000, year: 2023, mileage: 6000, for_rent: true, for_sale: false, active: true},
-                    {id: 7, number: "7", price_day: 250, price_month: 5000, sale_price: 44000, year: 2023, mileage: 4000, for_rent: true, for_sale: false, active: true},
-                    {id: 8, number: "8", price_day: 230, price_month: 4800, sale_price: 40000, year: 2022, mileage: 9000, for_rent: true, for_sale: false, active: true},
-                    {id: 9, number: "9", price_day: 280, price_month: 5500, sale_price: 47000, year: 2024, mileage: 2000, for_rent: true, for_sale: false, active: true},
-                    {id: 10, number: "10", price_day: 200, price_month: 4500, sale_price: 36000, year: 2022, mileage: 11000, for_rent: true, for_sale: true, active: true}
-                ],
-                nmax: [
-                    {id: 11, number: "11", price_day: 400, price_month: 8000, sale_price: 85000, year: 2023, mileage: 4000, for_rent: true, for_sale: true, active: true},
-                    {id: 12, number: "12", price_day: 400, price_month: 8000, sale_price: 82000, year: 2023, mileage: 6000, for_rent: true, for_sale: false, active: true},
-                    {id: 13, number: "13", price_day: 450, price_month: 8500, sale_price: 95000, year: 2024, mileage: 2000, for_rent: true, for_sale: false, active: true},
-                    {id: 14, number: "14", price_day: 450, price_month: 8500, sale_price: 88000, year: 2023, mileage: 5000, for_rent: true, for_sale: true, active: true},
-                    {id: 15, number: "15", price_day: 380, price_month: 7500, sale_price: 78000, year: 2023, mileage: 7000, for_rent: true, for_sale: false, active: true},
-                    {id: 16, number: "16", price_day: 400, price_month: 8000, sale_price: 83000, year: 2023, mileage: 5500, for_rent: true, for_sale: false, active: true},
-                    {id: 17, number: "17", price_day: 420, price_month: 8200, sale_price: 86000, year: 2023, mileage: 4500, for_rent: true, for_sale: false, active: true},
-                    {id: 18, number: "18", price_day: 450, price_month: 8500, sale_price: 92000, year: 2024, mileage: 3000, for_rent: true, for_sale: false, active: true},
-                    {id: 19, number: "19", price_day: 400, price_month: 8000, sale_price: 84000, year: 2023, mileage: 5200, for_rent: true, for_sale: false, active: true},
-                    {id: 20, number: "20", price_day: 380, price_month: 7500, sale_price: 76000, year: 2022, mileage: 8500, for_rent: true, for_sale: true, active: true}
-                ],
-                xmax: [
-                    {id: 21, number: "21", price_day: 700, price_month: 14000, sale_price: 185000, year: 2023, mileage: 3000, for_rent: true, for_sale: true, active: true},
-                    {id: 22, number: "22", price_day: 800, price_month: 16000, sale_price: 215000, year: 2024, mileage: 1000, for_rent: true, for_sale: false, active: true},
-                    {id: 23, number: "23", price_day: 750, price_month: 15000, sale_price: 195000, year: 2023, mileage: 2500, for_rent: true, for_sale: false, active: true}
-                ]
-            };
-        }
+        // Config is loaded from bikes-config.js
 
         let currentView = 'rental';
         let config = JSON.parse(JSON.stringify(bikesConfig)); // Deep copy
@@ -667,6 +634,12 @@
             
             document.getElementById('viewTitle').textContent = view === 'rental' ? 'Available for Rent' : 'Bikes for Sale';
             renderBikes();
+            
+            // Scroll to bikes section
+            document.getElementById('bikes').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
 
         // Render bikes
@@ -720,9 +693,9 @@
         }
 
         function renderBikeCard(bike, category) {
-            const bikeName = category === 'click' ? 'Honda Click 125i' : 
-                           category === 'nmax' ? 'Yamaha NMAX 155' : 
-                           'Yamaha XMAX 300';
+            const bikeName = bike.model || (category === 'click' ? 'Light Scooter' : 
+                           category === 'nmax' ? 'Sport Scooter' : 
+                           'Big Bike');
             const imageUrl = `images/${bike.number}.jpg`;
             
             if (currentView === 'rental') {
@@ -758,7 +731,10 @@
                         </div>
                     </div>
                 `;
-            } else {
+                                        } else {
+                // Only show bikes that have sale_price set
+                if (!bike.sale_price) return '';
+                
                 return `
                     <div class="flex-none w-80 scroll-snap-start">
                         <div class="bg-white rounded-2xl shadow-lg overflow-hidden  ">
@@ -778,15 +754,15 @@
                                         <span>Year:</span>
                                         <span class="font-semibold text-gray-900">${bike.year}</span>
                                     </div>
-                                    <div class="flex justify-between">
+                                    ${bike.mileage ? `<div class="flex justify-between">
                                         <span>Mileage:</span>
                                         <span class="font-semibold text-gray-900">${bike.mileage} km</span>
-                                    </div>
+                                    </div>` : ''}
                                     <div class="pt-3 border-t">
                                         <span class="text-3xl font-bold text-purple-600">฿${parseInt(bike.sale_price).toLocaleString()}</span>
                                     </div>
                                 </div>
-                                <a href="https://wa.me/79175556789?text=Hi! I want to buy ${bikeName} %23${bike.number} (${bike.year}, ${bike.mileage}km)" target="_blank" rel="noopener" 
+                                <a href="https://wa.me/79175556789?text=Hi! I want to buy ${bikeName} %23${bike.number} (${bike.year}${bike.mileage ? ', ' + bike.mileage + 'km' : ''})" target="_blank" rel="noopener" 
                                    class="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-4 rounded-xl  font-semibold text-lg shadow-lg">
                                     <i class="fab fa-whatsapp mr-2"></i>Inquire Now
                                 </a>
