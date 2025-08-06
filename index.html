@@ -196,24 +196,17 @@
             padding: 2rem;
         }
         
-        /* Hero Badge */
-        .hero-badge {
-            margin-bottom: 2rem;
+        /* Hero Logo */
+        .hero-logo {
+            text-align: center;
             opacity: 0;
             animation: fadeInUp 1s ease-out 0.3s forwards;
         }
         
-        .hero-badge-text {
-            display: inline-block;
-            background: linear-gradient(135deg, #D4A574, #E6B85C);
-            color: #fff;
-            font-weight: 700;
-            font-size: 0.9rem;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            letter-spacing: 1px;
-            box-shadow: 0 8px 32px rgba(212, 165, 116, 0.4);
-            animation: pulse 2s ease-in-out infinite;
+        .hero-logo img {
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+            max-width: 100%;
+            height: auto;
         }
         
         /* Hero Title */
@@ -792,18 +785,13 @@
             
             <!-- Animated Content -->
             <div class="relative z-20 text-center text-white px-4 max-w-7xl mx-auto hero-content">
-                <div class="hero-badge">
-                    <span class="hero-badge-text">🏍️ BIKE RENTAL ON KOH PHANGAN</span>
+                <!-- Hero Logo -->
+                <div class="hero-logo mb-8">
+                    <img src="images/new-logo.png" alt="Easy Ride Koh Phangan" class="w-48 md:w-64 h-auto mx-auto">
                 </div>
                 
-                <h1 class="hero-title">
-                    <span class="hero-word" data-delay="0">Explore</span>
-                    <span class="hero-word" data-delay="200">Paradise</span>
-                    <br class="hidden md:block">
-                    <span class="hero-word hero-word-accent" data-delay="400">on Two Wheels</span>
-                </h1>
-                
-                <p class="hero-subtitle">
+                <!-- Hero Subtitle -->
+                <p class="hero-subtitle text-xl md:text-2xl font-medium">
                     <span class="hero-line" data-delay="600">Premium motorbike rentals & sales</span>
                     <span class="hero-line" data-delay="800">in tropical Koh Phangan</span>
                 </p>
