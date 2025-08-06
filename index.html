@@ -222,6 +222,11 @@
             height: clamp(8rem, 15vh, 12rem);
         }
         
+        /* Header Logo */
+        .logo-header {
+            height: 4.5rem; /* 72px - увеличено в 1.5 раза от 48px */
+        }
+        
         .hero-word {
             display: inline-block;
             opacity: 0;
@@ -274,7 +279,7 @@
             font-family: 'Orbitron', monospace;
             font-size: 2rem;
             font-weight: 700;
-            color: #D4A574;
+            color: #ff8c42;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         
@@ -315,13 +320,13 @@
         }
         
         .hero-btn-primary {
-            background: linear-gradient(135deg, #D4A574, #E6B85C);
+            background: linear-gradient(135deg, #ff8c42, #ff6b35);
             color: white;
         }
         
         .hero-btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(212, 165, 116, 0.5);
+            box-shadow: 0 12px 40px rgba(255, 140, 66, 0.5);
         }
         
         .hero-btn-whatsapp {
@@ -764,7 +769,7 @@
         <header class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50">
             <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
                 <div class="flex items-center space-x-3">
-                    <img src="images/new-logo.png" alt="Easy Ride Koh Phangan" class="h-12 w-auto">
+                    <img src="images/new-logo.png" alt="Easy Ride Koh Phangan" class="logo-header w-auto">
                 </div>
                 <nav class="flex items-center space-x-8">
                     <button onclick="setView('rental')" id="rentalBtn" class="text-amber-700 font-semibold border-b-2 border-amber-700 pb-1">RENTALS</button>
@@ -1451,7 +1456,7 @@
                                 <div class="space-y-3 mb-6">
                                     <div class="flex justify-between items-center">
                                         <span class="text-gray-600">Daily rate:</span>
-                                        <span class="text-2xl font-bold" style="color: #D4A574;">฿${bike.price_day}</span>
+                                        <span class="text-2xl font-bold" style="color: #ff8c42;">฿${bike.price_day}</span>
                                     </div>
                                     <div class="flex justify-between items-center">
                                         <span class="text-gray-600">Monthly:</span>
@@ -1494,7 +1499,7 @@
                                         <span class="font-semibold text-gray-900">${bike.mileage} km</span>
                                     </div>` : ''}
                                     <div class="pt-3 border-t">
-                                        <span class="text-3xl font-bold" style="color: #D4A574;">฿${parseInt(bike.sale_price).toLocaleString()}</span>
+                                        <span class="text-3xl font-bold" style="color: #ff8c42;">฿${parseInt(bike.sale_price).toLocaleString()}</span>
                                     </div>
                                 </div>
                                 <a href="https://wa.me/79175556789?text=Hi! I want to buy ${bikeName} %23${bike.number} (${bike.year}${bike.mileage ? ', ' + bike.mileage + 'km' : ''})" target="_blank" rel="noopener" 
