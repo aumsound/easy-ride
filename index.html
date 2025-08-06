@@ -232,12 +232,22 @@
             .logo-header {
                 height: 9rem; /* 144px - в 2 раза больше */
             }
-            
-            /* Remove header padding on mobile */
-            header .max-w-7xl {
-                padding-top: 0.25rem !important; /* 1mm */
-                padding-bottom: 0.25rem !important; /* 1mm */
-            }
+        }
+        
+        /* Minimal header padding for all devices */
+        header .max-w-7xl {
+            padding-top: 0.25rem !important; /* 1mm top */
+            padding-bottom: 0.25rem !important; /* 1mm bottom */
+        }
+        
+        /* Force minimal header height */
+        header {
+            min-height: auto !important;
+        }
+        
+        /* Remove default spacing */
+        header .flex.items-center {
+            margin: 0 !important;
         }
         
         /* Instant appearance for all hero elements */
