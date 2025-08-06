@@ -350,7 +350,7 @@
         }
         
         /* Scroll Indicator */
-        .hero-scroll-indicator {
+        .hero-scroll-disabled {
             position: absolute;
             bottom: 2rem;
             left: 50%;
@@ -606,7 +606,7 @@
                 padding: 0.75rem 1.25rem;
             }
             
-            .hero-scroll-indicator {
+            .hero-scroll-disabled {
                 bottom: 1rem;
             }
         }
@@ -791,22 +791,13 @@
             
             <!-- Animated Content -->
             <div class="relative z-20 text-center text-white px-4 max-w-7xl mx-auto hero-content">
-                <!-- Hero Badge -->
-                <div class="hero-badge">
-                    <span class="hero-badge-text">🏍️ BIKE RENTAL ON KOH PHANGAN</span>
-                </div>
-                
                 <h1 class="hero-title">
-                    <span class="hero-word" data-delay="0">Explore</span>
-                    <span class="hero-word" data-delay="200">Paradise</span>
+                    <span class="hero-word" data-delay="0">Motorbike</span>
+                    <span class="hero-word" data-delay="200">Rentals</span>
+                    <span class="hero-word hero-word-accent" data-delay="400">& Sales</span>
                     <br class="hidden md:block">
-                    <span class="hero-word hero-word-accent" data-delay="400">on Two Wheels</span>
+                    <span class="hero-line" data-delay="600">Koh Phangan</span>
                 </h1>
-                
-                <p class="hero-subtitle">
-                    <span class="hero-line" data-delay="600">Premium motorbike rentals & sales</span>
-                    <span class="hero-line" data-delay="800">in tropical Koh Phangan</span>
-                </p>
                 
                 <div class="hero-stats bg-black/30 backdrop-blur-sm rounded-2xl p-6">
                     <div class="hero-stat">
@@ -840,10 +831,7 @@
             </div>
             
             <!-- Scroll Indicator -->
-            <div class="hero-scroll-indicator">
-                <div class="hero-scroll-wheel"></div>
-                <span class="hero-scroll-text">Scroll</span>
-            </div>
+
             
             <!-- Floating Elements for iPad -->
             <div class="hero-floating-elements">
@@ -914,7 +902,7 @@
                     </div>
                                 <div class="flex items-center text-sm text-gray-600">
                                     <i class="fab fa-whatsapp text-green-500 mr-3"></i>
-                                    <span>24/7 support via chat</span>
+                                    <span>Support</span>
                         </div>
                             </div>
                             <div class="mt-6">
@@ -1795,7 +1783,7 @@ var bikesConfig = ${JSON.stringify(config, null, 2)};`;
             }, observerOptions);
             
             // Observe elements that need scroll-triggered animations
-            document.querySelectorAll('.hero-stats, .hero-cta, .hero-scroll-indicator').forEach(el => {
+            document.querySelectorAll('.hero-stats, .hero-cta, .hero-scroll-disabled').forEach(el => {
                 observer.observe(el);
             });
         }
