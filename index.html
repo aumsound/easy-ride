@@ -234,20 +234,32 @@
             }
         }
         
-        /* Minimal header padding for all devices */
+        /* ZERO header padding for all devices */
         header .max-w-7xl {
-            padding-top: 0.25rem !important; /* 1mm top */
-            padding-bottom: 0.25rem !important; /* 1mm bottom */
+            padding-top: 0 !important; /* NO TOP PADDING */
+            padding-bottom: 0 !important; /* NO BOTTOM PADDING */
+            padding-left: 1rem !important; /* Keep horizontal padding */
+            padding-right: 1rem !important; /* Keep horizontal padding */
         }
         
         /* Force minimal header height */
         header {
             min-height: auto !important;
+            height: auto !important;
+            padding: 0 !important;
         }
         
-        /* Remove default spacing */
+        /* Remove ALL spacing from header elements */
         header .flex.items-center {
             margin: 0 !important;
+            padding: 0 !important;
+            gap: 0.75rem !important; /* Minimal gap between logo and nav */
+        }
+        
+        /* Remove logo container margins */
+        header .flex.items-center.space-x-3 {
+            margin: 0 !important;
+            gap: 0 !important;
         }
         
         /* Instant appearance for all hero elements */
