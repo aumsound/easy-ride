@@ -196,17 +196,25 @@
             padding: 2rem;
         }
         
-        /* Hero Logo */
-        .hero-logo {
-            text-align: center;
+        /* Hero Badge */
+        .hero-badge {
+            margin-bottom: 2rem;
             opacity: 0;
             animation: fadeInUp 1s ease-out 0.3s forwards;
         }
         
-        .hero-logo img {
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-            max-width: 100%;
-            height: auto;
+        .hero-badge-text {
+            display: inline-block;
+            background: linear-gradient(135deg, #D4A574, #E6B85C);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 32px rgba(212, 165, 116, 0.4);
+            animation: pulse 2s ease-in-out infinite;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
         
         /* Hero Title */
@@ -217,7 +225,7 @@
             line-height: 1.1;
             margin-bottom: 2rem;
             text-align: center;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
         }
         
         .hero-word {
@@ -241,7 +249,7 @@
             margin-bottom: 3rem;
             max-width: 600px;
             text-align: center;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
             line-height: 1.6;
         }
         
@@ -761,11 +769,7 @@
         <header class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50">
             <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
                 <div class="flex items-center space-x-3">
-                    <span class="text-2xl font-bold gradient-text md:hidden">EASYRIDE</span>
-                    <div class="w-12 h-12 bg-gradient-to-r from-amber-600 to-yellow-500 rounded-full flex items-center justify-center shadow-lg hidden md:flex">
-                        <i class="fas fa-motorcycle text-white text-xl"></i>
-                    </div>
-                    <span class="text-2xl font-bold gradient-text hidden md:block">Easy Ride</span>
+                    <img src="images/new-logo.png" alt="Easy Ride Koh Phangan" class="h-12 w-auto">
                 </div>
                 <nav class="flex items-center space-x-8">
                     <button onclick="setView('rental')" id="rentalBtn" class="text-amber-700 font-semibold border-b-2 border-amber-700 pb-1">RENTALS</button>
@@ -785,13 +789,19 @@
             
             <!-- Animated Content -->
             <div class="relative z-20 text-center text-white px-4 max-w-7xl mx-auto hero-content">
-                <!-- Hero Logo -->
-                <div class="hero-logo mb-8">
-                    <img src="images/new-logo.png" alt="Easy Ride Koh Phangan" class="w-48 md:w-64 h-auto mx-auto">
+                <!-- Hero Badge -->
+                <div class="hero-badge">
+                    <span class="hero-badge-text">🏍️ BIKE RENTAL ON KOH PHANGAN</span>
                 </div>
                 
-                <!-- Hero Subtitle -->
-                <p class="hero-subtitle text-xl md:text-2xl font-medium">
+                <h1 class="hero-title">
+                    <span class="hero-word" data-delay="0">Explore</span>
+                    <span class="hero-word" data-delay="200">Paradise</span>
+                    <br class="hidden md:block">
+                    <span class="hero-word hero-word-accent" data-delay="400">on Two Wheels</span>
+                </h1>
+                
+                <p class="hero-subtitle">
                     <span class="hero-line" data-delay="600">Premium motorbike rentals & sales</span>
                     <span class="hero-line" data-delay="800">in tropical Koh Phangan</span>
                 </p>
@@ -1155,107 +1165,7 @@
             </div>
         </section>
 
-        <!-- Real Rider Experience - Natural & Warm -->
-        <section class="py-24 px-4 relative overflow-hidden">
-            <!-- Natural Background -->
-            <div class="absolute inset-0 bg-gradient-to-br from-stone-800 via-amber-900 to-stone-900"></div>
-            <div class="absolute inset-0 bg-gradient-to-r from-amber-700/20 to-stone-700/20"></div>
-            
-            <!-- Content -->
-            <div class="relative z-10 max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-6xl font-bold text-white mb-6">
-                        Real Rider Experience
-                    </h2>
-                    <p class="text-xl text-amber-200 max-w-3xl mx-auto">
-                        Meet Misha - your local riding expert who's been exploring these roads since childhood
-                    </p>
-                </div>
-                
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <!-- Story Card -->
-                    <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white/20">
-                        <div class="flex items-center gap-4 mb-8">
-                            <div class="w-20 h-20 bg-stone-700 rounded-2xl flex items-center justify-center shadow-xl">
-                                <i class="fas fa-motorcycle text-white text-3xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold text-white">Misha</h3>
-                                <p class="text-amber-200">Founder & Chief Rider</p>
-                            </div>
-                        </div>
-                        
-                        <blockquote class="text-xl md:text-2xl text-white mb-8 leading-relaxed italic">
-                            "I've been riding scooters since I was 10 years old. I know every curve, every hill, every hidden spot on this island. When you rent from us, you get more than just a bike - you get local insider knowledge."
-                        </blockquote>
-                        
-                        <div class="grid grid-cols-2 gap-6 mb-8">
-                            <div class="text-center">
-                                <div class="text-3xl font-bold text-amber-400">15+</div>
-                                <div class="text-amber-200 text-sm">Years Riding</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-3xl font-bold text-amber-400">2.5</div>
-                                <div class="text-amber-200 text-sm">Years Business</div>
-                            </div>
-                        </div>
-                        
-                    <div class="flex justify-center">
-                            <div class="bg-stone-700 rounded-full px-8 py-3 shadow-lg">
-                                <span class="font-bold text-white">Local Expert Promise</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Experience Features -->
-                    <div class="space-y-6">
-                        <div class="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-map-marked-alt text-white"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-bold text-white mb-2">Local Secret Spots</h4>
-                                    <p class="text-amber-200">Get exclusive tips on hidden beaches, best viewpoints, and local restaurants only islanders know about.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-stone-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-route text-white"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-bold text-white mb-2">Safe Route Planning</h4>
-                                    <p class="text-amber-200">Personal recommendations for the safest and most scenic routes based on your riding experience.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-amber-700 rounded-xl flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-tools text-white"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-bold text-white mb-2">Personal Care</h4>
-                                    <p class="text-amber-200">Every bike is personally maintained by Misha. He knows each bike's personality and will match you perfectly.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="text-center pt-6">
-                            <a href="https://wa.me/79175556789?text=Hi Misha! I'd love to hear your local recommendations" target="_blank" 
-                               class="inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl transition-all">
-                                <i class="fab fa-whatsapp text-xl"></i>
-                                <span>Chat with Misha</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <!-- Google Rating Section -->
         <section class="py-24 px-4 bg-white">
@@ -1266,7 +1176,7 @@
                 <div class="bg-gradient-to-br from-stone-50 to-amber-50 rounded-3xl p-8 md:p-12 mb-16">
                     <div class="flex flex-col md:flex-row items-center justify-center gap-8">
                         <div class="flex items-center gap-4">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" class="w-12 h-12">
+
                             <div class="text-left">
                                 <div class="flex items-center gap-2 mb-2">
                                     <span class="text-4xl font-bold text-gray-900">5.0</span>
