@@ -1376,7 +1376,20 @@
         // Config is loaded from bikes-config.js
 
         let currentView = 'rental';
-        let config = JSON.parse(JSON.stringify(bikesConfig)); // Deep copy
+        
+        // Load config from localStorage or use default
+        let config;
+        try {
+            const savedConfig = localStorage.getItem('bikesConfig');
+            if (savedConfig) {
+                config = JSON.parse(savedConfig);
+            } else {
+                config = JSON.parse(JSON.stringify(bikesConfig)); // Deep copy of default
+            }
+        } catch (error) {
+            console.error('Error loading saved config:', error);
+            config = JSON.parse(JSON.stringify(bikesConfig)); // Fallback to default
+        }
 
         // Routing
         function checkRoute() {
@@ -1699,9 +1712,10 @@
 
         function saveConfig() {
             localStorage.setItem('bikesConfig', JSON.stringify(config));
-            bikesConfig = JSON.parse(JSON.stringify(config));
+            bikesConfig = JSON.parse(JSON.stringify(config)); // Update global bikesConfig
             showToast('Configuration saved!', 'success');
-            renderBikes();
+            renderBikes(); // Re-render main site with new config
+            renderAdminBikes(); // Re-render admin panel to show saved state
         }
 
         function exportConfig() {
